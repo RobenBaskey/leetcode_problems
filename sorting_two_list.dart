@@ -19,7 +19,7 @@ void main() {
 
 class Solution {
   ListNode? mergeTwoLists(ListNode? list1, ListNode? list2) {
-   List<int>? listMerged = <int>[];
+    List<int>? listMerged = <int>[];
 
     while (list1 != null) {
       listMerged.add(list1.val);
