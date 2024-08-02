@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	arr := []int{1, 1, 1, 1}
-	result := numIdenticalPairs2(arr)
+	arr := []int{1, 2, 3, 1, 1, 3}
+	result := goodPairHashTable(arr)
 	fmt.Println(result)
 }
 
@@ -33,4 +33,17 @@ func numIdenticalPairs2(nums []int) int {
 		ans = ans + (value * (value - 1) / 2)
 	}
 	return ans
+}
+
+func goodPairHashTable(nums []int) int {
+	var result int
+
+	m := make(map[int]int)
+	for _, num := range nums {
+		result += m[num]
+		fmt.Println(result)
+		m[num]++
+	}
+
+	return result
 }
