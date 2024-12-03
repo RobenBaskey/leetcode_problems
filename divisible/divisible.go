@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	var n int32 = 6
@@ -8,6 +10,8 @@ func main() {
 	arr := []int32{1, 3, 2, 6, 1, 2}
 
 	divisibleSumPairs(n, k, arr)
+
+	checkIfElse("5")
 
 }
 
@@ -27,4 +31,12 @@ func divisibleSumPairs(n int32, k int32, ar []int32) int32 {
 	}
 
 	return result
+}
+
+func checkIfElse(data string) {
+	if data != "" && data != "1" && data != "2" && data != "3" {
+		fmt.Println("Invalid data")
+	} else {
+		fmt.Println("Valid")
+	}
 }
